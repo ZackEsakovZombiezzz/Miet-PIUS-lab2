@@ -2,14 +2,13 @@
 
 namespace Database\Seeders;
 
+use App\Models\Address;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class AddressSeeder extends Seeder
 {
     public function run(): void
     {
-        $this->call([
-            AddressSeeder::class
-        ]);
+        Address::factory()->count(100)->create();
     }
 }
