@@ -14,6 +14,6 @@ class Customer extends Model
 
     public function addresses(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(Address::class)->orderBy('created_at');
+        return $this->hasMany(Address::class);
     }
 }
