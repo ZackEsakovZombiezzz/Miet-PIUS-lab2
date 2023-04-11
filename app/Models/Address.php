@@ -11,8 +11,8 @@ class Address extends Model
 
     protected $primaryKey = 'address_id';
 
-    public function customer()
+    public function customer(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        $this->belongsTo(Customer::class);
+        return $this->belongsTo(Customer::class);
     }
 }
